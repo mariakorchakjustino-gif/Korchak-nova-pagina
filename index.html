@@ -17,10 +17,11 @@
         main {
             background: #FFFFFF;
             color: #183C63
-            text-align: center;
+            text-align: left;
             max-width: 800px;
             margin: 0 auto;
            border: 5px solid #cf1010;
+           padding: 16px
            display: flex;
         }
         img {
@@ -45,8 +46,19 @@
         <h2>Primeiro Post</h2>
         <p class="artigo-autor"> Por: Korchak</p>
         <p>Boas-vindas ao meu blog! Aqui vou compartilhar dicas de programação e curiosidades da area de tecnologia.</p>
+        <button>💜​<span>0</span></button>
         </div>
     </main>
+
+    <script>
+        const botao = document.querySelector("buton");
+        botao.addEventListerner("click",botaoClicado);
+
+        function botaoClicado() {
+            let texto = botao.querySelector("span");
+            texto.textContent++;
+        }
+    </script>
 
 </body>
 
