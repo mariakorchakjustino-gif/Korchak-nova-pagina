@@ -89,12 +89,20 @@
         botoes.ForEach(function (botao) {
             let curtiu = false;
             botao.addEventListener("click", botaoClicado);
-        });
+       
 
-        function botaoClicado(event) {
-            let texto = event.currentTarget.querySelector("span");
-            texto.textContent++;
+        function botaoClicado( ) {
+            let texto = botao.querySelector("span");
+
+            if (curtiu === false){ 
+                texto.textContent++;
+                curtir = true;
+            } else {
+                text.textContent++;
+                curtiu = false;
+            }
         }
+         });
     </script>
 
 
